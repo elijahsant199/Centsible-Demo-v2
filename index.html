@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centsible</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Centsible Budgeting App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Welcome to Centsible Demo</h1>
-  <p>This is your budgeting app preview. Add it to your home screen for full PWA experience.</p>
+  <div class="app-container">
+    <header>
+      <h1>Centsible</h1>
+    </header>
+
+    <main>
+      <section id="home" class="tab-content active">
+        <h2>Welcome to Centsible</h2>
+        <p>Your quick balance summary will appear here.</p>
+      </section>
+
+      <section id="transactions" class="tab-content">
+        <h2>Income & Expenses</h2>
+        <p>Feature coming soon: Add & view your transactions.</p>
+      </section>
+
+      <section id="goals" class="tab-content">
+        <h2>Save Goals</h2>
+        <p>Feature coming soon: Track your savings progress.</p>
+      </section>
+    </main>
+
+    <nav class="tab-bar">
+      <button data-target="home" class="tab-button active">Home</button>
+      <button data-target="transactions" class="tab-button">Income & Expenses</button>
+      <button data-target="goals" class="tab-button">Save Goals</button>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
