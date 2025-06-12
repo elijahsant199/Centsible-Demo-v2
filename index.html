@@ -2,42 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Centsible</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#4CAF50" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+
+  <!-- Style (basic visual polish) -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f8f8;
+      color: #333;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #4CAF50;
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-top: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Centsible Budgeting App</h1>
-  </header>
-
-  <nav class="tabs">
-    <button class="tab-btn active" data-tab="income">Income</button>
-    <button class="tab-btn" data-tab="expenses">Expenses</button>
-    <button class="tab-btn" data-tab="savings">Savings Goals</button>
-  </nav>
-
-  <main>
-    <section id="income" class="tab-content">
-      <h2>Income</h2>
-      <input type="number" id="income-amount" placeholder="Amount" />
-      <button id="add-income">Add Income</button>
-    </section>
-
-    <section id="expenses" class="tab-content hidden">
-      <h2>Expenses</h2>
-      <input type="number" id="expense-amount" placeholder="Amount" />
-      <button id="add-expense">Add Expense</button>
-    </section>
-
-    <section id="savings" class="tab-content hidden">
-      <h2>Savings Goals</h2>
-      <input type="text" id="savings-name" placeholder="Goal Name" />
-      <input type="number" id="savings-amount" placeholder="Amount" />
-      <button id="add-savings">Add Goal</button>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
+  <div class="container">
+    <h1>Welcome to Centsible Demo</h1>
+    <p>This is your budgeting app preview.</p>
+    <p>Add it to your home screen for the full app experience!</p>
+  </div>
 </body>
 </html>
