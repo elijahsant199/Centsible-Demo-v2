@@ -3,38 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Centsible Budgeting App</title>
+  <title>Centsible</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="app-container">
-    <header>
-      <h1>Centsible</h1>
-    </header>
+  <header>
+    <h1>Centsible Budgeting App</h1>
+  </header>
 
-    <main>
-      <section id="home" class="tab-content active">
-        <h2>Welcome to Centsible</h2>
-        <p>Your quick balance summary will appear here.</p>
-      </section>
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="income">Income</button>
+    <button class="tab-btn" data-tab="expenses">Expenses</button>
+    <button class="tab-btn" data-tab="savings">Savings Goals</button>
+  </nav>
 
-      <section id="transactions" class="tab-content">
-        <h2>Income & Expenses</h2>
-        <p>Feature coming soon: Add & view your transactions.</p>
-      </section>
+  <main>
+    <section id="income" class="tab-content">
+      <h2>Income</h2>
+      <input type="number" id="income-amount" placeholder="Amount" />
+      <button id="add-income">Add Income</button>
+    </section>
 
-      <section id="goals" class="tab-content">
-        <h2>Save Goals</h2>
-        <p>Feature coming soon: Track your savings progress.</p>
-      </section>
-    </main>
+    <section id="expenses" class="tab-content hidden">
+      <h2>Expenses</h2>
+      <input type="number" id="expense-amount" placeholder="Amount" />
+      <button id="add-expense">Add Expense</button>
+    </section>
 
-    <nav class="tab-bar">
-      <button data-target="home" class="tab-button active">Home</button>
-      <button data-target="transactions" class="tab-button">Income & Expenses</button>
-      <button data-target="goals" class="tab-button">Save Goals</button>
-    </nav>
-  </div>
+    <section id="savings" class="tab-content hidden">
+      <h2>Savings Goals</h2>
+      <input type="text" id="savings-name" placeholder="Goal Name" />
+      <input type="number" id="savings-amount" placeholder="Amount" />
+      <button id="add-savings">Add Goal</button>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
